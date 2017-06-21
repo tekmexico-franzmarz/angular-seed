@@ -1,0 +1,3 @@
+npm install --save jquery bootstrap@4.0.0-alpha.6 tether
+
+npm install --save-dev @types/jquery @types/tether node-sass
