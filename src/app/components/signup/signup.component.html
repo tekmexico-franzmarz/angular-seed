@@ -1,0 +1,77 @@
+<div class="signupFormContainer">
+  <div class="signupForm">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-md-6 offset-sm-2 offset-md-3">
+        <form class="form-horizontal" [formGroup]="signupForm" (ngSubmit)="register()" novalidate>
+          <h2>Register New User</h2>
+          <hr class="colorgraph">
+          <div class="row">
+            <div class="form-group">
+              <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                <input type="text" id="fullName" formControlName="fullName" class="form-control" placeholder="Your Full Name" required autofocus>
+              </div>
+            </div>
+            <div class="form-control-feedback">
+              <span class="text-danger align-middle" *ngIf="formErrors.fullName">
+                {{formErrors.fullName}}
+                </span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                <input type="text" id="email" formControlName="email" class="form-control" placeholder="Email Address" required>
+              </div>
+            </div>
+            <div class="form-control-feedback">
+              <span class="text-danger align-middle" *ngIf="formErrors.email">
+                  {{formErrors.email}}
+                </span>
+            </div>
+          </div>
+
+          <div formGroupName="passwords">
+            <div class="row">
+              <div class="form-group">
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                  <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
+                  <input type="password" id="password" formControlName="password" class="form-control" placeholder="Password" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group">
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                  <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-repeat"></i></div>
+                  <input type="password" id="confirmPassword" formControlName="confirmPassword" class="form-control" placeholder="Confirm Password"
+                    required>
+                </div>
+              </div>
+              <div class="form-control-feedback">
+                <span class="text-danger align-middle" *ngIf="formErrors.passwords">
+                  {{formErrors.passwords}}
+                </span>
+              </div>
+            </div>
+          </div>
+          <hr class="colorgraph">
+          <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 pull-end">
+              <a href="#/login" class="btn btn-lg btn-warning"> <i class="fa fa-undo"></i> Go Back</a>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 pull-end">
+              <button type="submit" class="btn btn-lg btn-primary" [disabled]="!signupForm.valid"><i class="fa fa-user-plus"></i> Register</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="logoContainer">
+  <div class="logo"></div>
+</div>

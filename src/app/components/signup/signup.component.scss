@@ -1,0 +1,61 @@
+.signupFormContainer {
+  background: #fff;
+  position: absolute;
+  width: 50%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  overflow: hidden
+}
+
+.signupForm {
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.logoContainer {
+  position: absolute;
+  width: 50%;
+  height: 90vh;
+  right: 0;
+  top: 0;
+  margin-top: 35px;
+  background: url("../../../assets/images/signupBg (2).jpg") transparent;
+}
+
+.logo {
+  position: relative;
+  margin: auto;
+  width: 500px;
+  height: 500px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url("../../../assets/images/logo.png") transparent;
+}
+
+.form-group{
+  width: 100%;
+}
+
+.form-control-feedback{
+  margin-top: -0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.colorgraph {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+
+.pull-end {
+  text-align: end
+}

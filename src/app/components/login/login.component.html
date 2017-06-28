@@ -1,0 +1,76 @@
+<div class="loginFormContainer">
+  <div class="loginForm">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-md-6 offset-sm-2 offset-md-3">
+        <form role="form" (ngSubmit)="loginFn();" #loginForm="ngForm">
+          <fieldset>
+            <h2>Log In</h2>
+            <hr class="colorgraph">
+            <div class="form-group">
+              <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                <input type="text" [(ngModel)]="credentials.email" name="email" id="email" class="form-control input-lg" placeholder="Email Address"
+                  required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+              </div>
+            </div>
+            <div class="form-control-feedback">
+                <span class="text-danger align-middle" *ngIf="formErrors.email">
+                  {{formErrors.email}}
+                </span>
+              </div>
+            <div class="form-group">
+              <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
+                <input type="password" [(ngModel)]="credentials.password" name="password" id="password" class="form-control input-lg" placeholder="Password"
+                  required>
+              </div>
+            </div>
+            <div class="pull-end">
+              <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#forgottenPass" style="cursor:pointer">
+                Forgot Password?
+              </button>
+            </div>
+            <hr class="colorgraph">
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="!loginForm.form.valid"><i class="fa fa-sign-in"></i> Log In </button>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <a href="#/signup" class="btn btn-lg btn-warning btn-block"><i class="fa fa-user-plus"></i> Sign Up</a>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="logoContainer">
+  <div class="logo"></div>
+</div>
+<div class="alert alert-danger alert-dismissable fade in" role="alert" *ngIf="message" [ngClass]="{ 'alert': message, 'alert-success': message.type === 'success', 'alert-danger': message.type === 'error'}">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <!--<strong>Oh snap!</strong> Wrong <a href="#" class="alert-link">username or password.</a>-->
+  <strong>Oh snap!</strong> Wrong <a href="#" class="alert-link">{{message.text}}</a>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="forgottenPass" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Forgotten Password</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Send an email to <a href="mailto:fmartinez@tekmexico.com">fmartinez@tekmexico.com</a> to ask for a password reset.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" style="cursor:pointer">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
